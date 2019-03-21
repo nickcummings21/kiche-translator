@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" 
+          href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" 
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" 
+          crossorigin="anonymous">
+
+    <link rel="stylesheet" href="utils.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="examples.css">
+    <script src="main.js"></script>
+
+    <title>K'iche' Translator</title>
+</head>
+
+<body onload="loadContent()">
+
+    <div class="main-header">
+        <div class="main-logo"></div>
+        <div class="main-title">
+            K'iche' Translator
+        </div>
+        <div class="main-nav">
+            <div id="translate-tab"
+                class="main-nav-link active"
+                onclick="setActiveTab('translate')">
+                Translate
+            </div>
+            <div id="add-tab" 
+                class="main-nav-link"
+                onclick="setActiveTab('add')">
+                Add Content
+            </div>
+            <div id="theme-tab" 
+                class="main-nav-link"
+                onclick="setActiveTab('theme')">
+                Change Theme
+            </div>
+        </div>
+    </div>
+
+    <div class="left-decoration"></div>
+    <div class="right-decoration"></div>
+
+    <div class="main-content">
+
+        <div class="add-content">
+            <div class="add-content-title">
+                Add Content
+            </div>
+            <div class="add-content-section">
+                <div class="add-content-subtitle">
+                    Upload CSV File
+                </div>
+                <input id="upload-content-input"
+                    type="file" accept="*.csv">
+                <button class="btn" onclick="addTranslation()">
+                    Submit
+                </button>
+            </div>
+            <div class="add-content-section">
+                <div class="add-content-subtitle">
+                    Add Translation
+                </div>
+                <input id="new-eng-text" 
+                    class="add-content-input" 
+                    type="text" 
+                    placeholder="English Text">
+                <input id="new-kch-text" 
+                    class="add-content-input" 
+                    type="text" 
+                    placeholder="K'iche' Text">
+                <input id="new-eng-example" 
+                    class="add-content-input" 
+                    type="text" 
+                    placeholder="English Example">
+                <input id="new-kch-example" 
+                    class="add-content-input" 
+                    type="text" 
+                    placeholder="K'iche' Example">
+                <button class="btn" onclick="addTranslation()">
+                    Submit
+                </button>
+            </div>
+        </div>
+    
+        <div class="translate active">
+            <div class="translate-title">
+                Translate
+            </div>
+
+            <div class="translate-subtitle">
+                <div class="translate-direction">
+                    English to K'iche'
+                </div>
+                <button class="translate-switch btn"
+                    onclick="switchTranslateDirection()">
+                    Switch
+                </button>
+            </div>
+            <input id="translate-text" 
+                    class="translate-input" 
+                    type="text" 
+                    placeholder="Text to translate"
+                    onkeyup="event.keyCode == 13 ? doTranslate() : ''">
+            <br>
+            <button class="btn" onclick="doTranslate()">
+                Translate
+            </button>
+
+            <div class="translations">
+                <div class="translations-title">
+                    Translations
+                </div>
+            </div>   
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+
+.translation-examples {
+    padding: .5rem;
+    transition: height .2s;
+}
+
+.examples-title {}
+
+.add-example-btn {
+    display: inline-block;
+    margin-left: 8px;
+    font-size: .7rem;
+    cursor: pointer;
+}
+
+.example-row {
+    position: relative;
+    margin: .5rem 0;
+}
+
+.example-col {
+    display: inline-block;
+    vertical-align: top;
+    width: 49%;
+    margin: auto;
+    /* padding-left: .5rem; */
+}
+
+.edit-example-btn {
+    position: absolute;
+    right: 56px;
+    transition: opacity .2s;
+    opacity: 0;
+}
+
+.delete-example-btn {
+    position: absolute;
+    right: 32px;
+    transition: opacity .2s;
+    opacity: 0;
+}
+
+.row:hover .edit-example-btn, .row:hover .delete-example-btn {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.new-example-input {
+    margin: .5rem 0;
+    padding: 6px;
+    border: none;
+    border-radius: 4px;
+}
+
+.submit-example-btn {
+    color: #0f5;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+.cancel-example-btn {
+    color: #f20;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+
+
+
+
+

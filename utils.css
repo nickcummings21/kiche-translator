@@ -1,0 +1,57 @@
+
+::-webkit-scrollbar {}
+
+::-webkit-scrollbar-thumb {
+    background: #f81;
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #222;
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-button {}
+
+input, button {
+    outline: none !important;
+}
+
+.btn {
+    cursor: pointer;
+    outline: none !important;
+    padding: .5rem 1.5rem;
+    background: #ff8800;
+    background: linear-gradient(to bottom right, #f81, #b60);
+    border: none;
+    border-radius: 8px;
+    box-shadow: inset 0 4px 4px rgba(255, 255, 255, .3), inset 0 -4px 4px rgba(0, 0, 0, .3);
+}
+
+.btn:hover {
+    color: white;
+}
+
+.btn:active {
+    position: relative;
+    top: 1px;
+    box-shadow: inset 0 -2px 4px rgba(255, 255, 255, .3), inset 0 2px 4px rgba(0, 0, 0, .3);
+}
+
+.active {
+    color: white !important;
+    opacity: 1 !important;
+    z-index: 1 !important;
+    transition-property: opacity !important;
+    transition-delay: .4s !important;
+}
+
+.row {
+    
+}
+
+.col {
+    display: inline-block;
+    width: 49%;
+    /* padding-left: .5rem; */
+}
